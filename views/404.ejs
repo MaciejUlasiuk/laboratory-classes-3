@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pl_PL"> 
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title><%= headTitle %></title> 
+  <link rel="stylesheet" href="/css/main.css"> 
+</head>
+<body>
+
+  <%# <%- include('./partials/navigation', { menuLinks: [{ label: 'Home', path: '/' }], activeLinkPath: '' }) %>
+
+  <main> 
+    <h1 class="heading">404 - Not Found</h1> 
+    <p>Sorry, the requested page could not be found.</p>
+    <% if (typeof path !== 'undefined' && path) { %>
+      <p>Requested path: <code><%= path %></code></p>
+    <% } %>
+    <a href="/">Go to Home</a>
+  </main>
+</body>
+</html>

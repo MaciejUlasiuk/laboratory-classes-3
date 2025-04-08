@@ -10,16 +10,13 @@
   <%- include('./partials/navigation', { menuLinks: menuLinks, activeLinkPath: activeLinkPath }) %>
 
   <main>
-    <h1 class="heading">Products</h1> 
-
-    <% if (typeof products !== 'undefined' && products.length > 0) { %>
-      <ul> 
-        <% products.forEach(product => { %> 
-          <li>Name: <%= product.name %>, Description: <%= product.description %></li> 
-        <% }); %>
-      </ul>
+    <h1 class="heading">Newest product</h1>
+    <% if (typeof newestProduct !== 'undefined' && Object.keys(newestProduct).length > 0) { %>
+      <div>
+         <p>New product data - Name: <%= newestProduct.name %>, Description: <%= newestProduct.description %></p>
+      </div>
     <% } else { %>
-      <div>No products available.</div> 
+      <div>No new products available.</div>
     <% } %>
   </main>
 </body>
